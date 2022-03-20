@@ -1,41 +1,19 @@
 import React from "react";
+import listCustomer from "./listCustomers";
+import Button from "./components/Button.jsx";
 
-const listCustomer = [
-    {
-        id: 1,
-        name: 'Enuch',
-        skills: ['JS', 'reactSJ', 'Node']
-    },
-    {
-        id: 2,
-        name: 'Ilson',
-        skills: ['JS', 'reactSJ', 'Node']
-    },
-    {
-        id: 3,
-        name: 'Yuri',
-        skills: ['JS', 'reactSJ', 'Node']
-    },
-    {
-        id: 4,
-        name: 'Niedson',
-        skills: ['JS', 'reactSJ', 'Node']
-    }
-]
 
 const showEvent = (cust) => {
     console.log("Evento click")
     console.log(cust)
-
 }
-
 
 const App = () => {
 
     const renderCustomer = (customer, index) => {
         return (
             <div key={`customer-${customer.id}`}>
-                <button onClick={(e) => showEvent(customer.id)}>Mostrar evento</button>
+                <Button onClick={() => showEvent(customer.id)}>Deletar</Button>
                 <li >{customer.name} </li>
 
             </div>
